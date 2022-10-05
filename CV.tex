@@ -180,7 +180,8 @@
                          & \parbox{0.8\textwidth}{                                                                                                                                                   %
         \begin{itemize}[leftmargin=*, itemsep=-0.70ex, topsep=-0.88ex]
             \item \textsl{Objective:} Design of hardware and software-optimized algorithms to capture vibrant and detailed low-light photos with inexpensive camera sensors without the use of obtrusive flashlights.
-            \item Trained, optimised, and deployed PyTorch models for de-blurring and low-light enhancement.
+                  % \item Trained, optimised, and deployed PyTorch models for de-blurring and low-light enhancement.
+            \item Trained and optimised the network to have just 79416 parameters and require just 5.21 GFlops of compute for a $256\times 256 \times 3$ image.
             \item Redesigned the entire image processing pipeline on the edge device in C\texttt{++} to reduce latency and memory.
         \end{itemize}
     }
@@ -202,8 +203,7 @@
                          & \bdit{Change detection in SAR images} \hfill \textsl{Feb 2021 -- May 2021}                                                                                                \\
                          & \parbox{0.8\textwidth}{                                                                                                                                                   %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
-            \item Developed a multi-sensor, multi-modal algorithm for change detection in bi-temporal Synthetic Aperture Radar (SAR) images.
-            \item Presented findings in a report as part of a course-project in \textsl{Image and Video Processing}.
+            \item Developed a multi-sensor, multi-modal algorithm for change detection in bi-temporal Synthetic Aperture Radar (SAR) images and presented findings in a report as part of a course-project.
         \end{itemize}
     }                                                                                                                                                                                                \\
     \\[-1.4ex]
@@ -245,8 +245,8 @@
                          & \bdit{Segmentation of brain tumours in MRI images} \hfill \textsl{Dec 2019}                                                                                               \\
                          & \parbox{0.8\textwidth}{                                                                                                                                                   %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
-            \item Reproduced state of the art semantic segmentation models in Keras/TFv1
-                  to segment brain tumours and surrounding edema from MRI images.
+            \item Reproduced state of the art semantic segmentation models in Keras/TF
+                  to segment brain tumours and surrounding edema from MRI images with upto 83\% accuracy.
             \item Presented results on multi-class segmentation with a custom model variant on the BRATS dataset as part of a workshop on medical imaging.
         \end{itemize}
     }                                                                                                                                                                                                \\
@@ -255,8 +255,8 @@
                          & \bdit{Detecting Ponzi schemes in blockchain smart contracts} \hfill \textsl{Aug 2019 -- Sep 2019}                                                                         \\
                          & \parbox{0.8\textwidth}{                                                                                                                                                   %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
-            \item Designed a custom model to detect Ponzi smart contracts deployed on the Ethereum blockchain using CNNs and stacked auto-encoders, in under 48h as a part of a coding sprint.
-            \item Trained the model on raw bytecode of smart contracts mined from the blockchain using Google BigQuery, publicly available Solidity source code of popular smart contracts, and a publicly available dataset of known Ponzi schemes.
+            \item Designed a custom model to classify smart contracts deployed on the Ethereum blockchain into 16 categories using CNNs and stacked auto-encoders, in under 48 hours as a part of a coding sprint.
+            \item Trained the model on raw bytecode of smart contracts mined from the blockchain using Google BigQuery, publicly available Solidity source code of popular smart contracts, and a publicly available dataset of 184 known Ponzi schemes.
                   % \item 
         \end{itemize}
     }                                                                                                                                                                                                \\
