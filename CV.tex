@@ -35,6 +35,9 @@
 \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
 % For customization of list environment
 \usepackage{enumitem}
+% For multirow elements in table
+\usepackage{multirow}
+\usepackage{array, makecell}
 
 % === Setup ===
 % Page numbers - 
@@ -59,28 +62,28 @@
 
 \noindent \begin{longtable}{@{} p{0.13\linewidth} p{0.8\linewidth}}
     % Address & socials
-    \stitle{Contact}     & Belgrave View \hfill \href{mailto:rshwndsz@gmail.com}{rshwndsz@gmail.com}                                                                                                 \\
-    \stitle{Information} & 1 Belgrave Middleway \hfill \href{https://rshwndsz.github.io}{rshwndsz.github.io}                                                                                         \\
-                         & Birmingham B5 7AJ \hfill \href{https://github.com/rshwndsz}{\faIcon{github}} \href{https://linkedin.com/in/rshwndsz}{\faIcon{linkedin}} \textcolor{dark-purple}{rshwndsz} \\
+    \multirow{2}{6.5em}{\stitle{Contact Information}} & Belgrave View \hfill \href{mailto:rsd259@student.bham.ac.uk}{rsd259@student.bham.ac.uk}                                                                                                               \\
+                                                      & 1 Belgrave Middleway \hfill \href{https://rshwndsz.github.io}{rshwndsz.github.io} $\cdot$ \href{mailto:rshwndsz@gmail.com}{rshwndsz@gmail.com}                                                        \\
+                                                      & Birmingham B5 7AJ \hfill \href{https://github.com/rshwndsz}{\faIcon{github} github.com/rshwndsz} $\cdot$ \href{https://linkedin.com/in/rshwndsz}{\faIcon{linkedin}} \textcolor{dark-purple}{rshwndsz} \\
     \\
 
 
     % Education
-    \stitle{Education}   & {Master of Science, Artificial Intelligence \& Machine Learning}                                                                                                          \\
-                         & \href{https://birmingham.ac.uk}{University of Birmingham} \hfill \textsl{2022\ --\ 2023}                                                                                  \\
+    \stitle{Education}                                & {Master of Science, Artificial Intelligence \& Machine Learning}                                                                                                                                      \\
+                                                      & \href{https://birmingham.ac.uk}{University of Birmingham}, UK \hfill \textsl{2022\ --\ 2023}                                                                                                          \\
     \\[-1.5ex]
-                         & {Bachelor of Technology, Electronics \& Communications Engineering} \hfill \textsl{8.57}                                                                                  \\
-                         & \href{https://nitk.ac.in}{National Institute of Technology Karnataka}, India \hfill \hspace{-3em} \textsl{2017\ --\ 2021}                                                 \\
+                                                      & {Bachelor of Technology, Electronics \& Communications Engineering}                                                                                                                                   \\
+                                                      & \href{https://nitk.ac.in}{National Institute of Technology Karnataka}, India \hfill \hspace{-3em} \textsl{2017\ --\ 2021}                                                                             \\
     \\[-1.5ex]
-                         & {K-12} \hfill \textsl{X: 10.0, XII: 95.6\%}                                                                                                                               \\
-                         & \href{https://littlerock.edu.in}{Little Rock Indian School}, India \hfill \textsl{2004\ --\ 2017}                                                                         \\
+                                                      & {K-12}                                                                                                                                                                                                \\
+                                                      & \href{https://littlerock.edu.in}{Little Rock Indian School}, India \hfill \textsl{2004\ --\ 2017}                                                                                                     \\
     \\
 
 
     % Skills
     % TODO Table?
-    \stitle{Skills}      &                                                                                                                                                                           \\[-2.34ex]
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+    \stitle{Skills}                                   &                                                                                                                                                                                                       \\[-2.34ex]
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=0ex, itemsep=-0.4ex, topsep=-2ex, label={}]
             \item \bdit{Languages}: Python, Java, C\texttt{++}, C, SQL, JavaScript, Go, Rust, MATLAB
             \item \bdit{Frameworks}:  PyTorch, Keras, OpenCV, scikit-learn, Numeric \& Scientific Python
@@ -94,8 +97,8 @@
 
 
     % Research interests
-    \stitle{Research}    & Real-Time Computer Vision for Augmented Reality                                                                                                                           \\
-    \stitle{Interests}   & Image and Video Retrieval, Neural Hashing                                                                                                                                 \\
+    \multirow{2}{5em}{\stitle{Research Interests}}    & Real-Time Computer Vision for Augmented Reality                                                                                                                                                       \\
+                                                      & Image and Video Retrieval, Neural Hashing                                                                                                                                                             \\
     \\
 
 
@@ -109,10 +112,10 @@
 
 
     % Research experience
-    \stitle{Research}    & \bdit{Research Intern}                                                                                                                                                    \\
-    \stitle{Experience}  & \href{http://www.minds.iitb.ac.in/}{CMInDS} and \href{https://www.csre.iitb.ac.in/}{CSRE}, IIT Bombay \hfill \textsl{May 2021\ --\ Sep 2021}                              \\
+    \multirow{2}{6.5em}{\stitle{Research Experience}} & \bdit{Research Intern}                                                                                                                                                                                \\
+                                                      & \href{http://www.minds.iitb.ac.in/}{CMInDS} and \href{https://www.csre.iitb.ac.in/}{CSRE}, IIT Bombay, India \hfill \textsl{May 2021\ --\ Sep 2021}                                                   \\
     %  & \textsl{\href{https://biplab-banerjee.github.io/}{Advisor: Prof Biplab Banerjee}} \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
             \item Designed \& developed novel model variants with vision transformers \& CNNs for the multi-modal, pixel-wise classification of land-use from hyperspectral \& LiDAR satellite imagery.
             \item Improved model search times with state of the art Bayesian hyperparameter optimisation.
@@ -120,10 +123,10 @@
     }
     \\
     \\
-                         & \bdit{Winter Research Intern}                                                                                                                                             \\
-                         & Deep Learning Lab, NIT Karnataka \hfill \hspace{-3em} \textsl{Dec 2020\ --\ Mar 2020}                                                                                     \\
+                                                      & \bdit{Winter Research Intern}                                                                                                                                                                         \\
+                                                      & Deep Learning Lab, NIT Karnataka, India \hfill \hspace{-3em} \textsl{Dec 2020\ --\ Mar 2020}                                                                                                          \\
     %  & \textsl{\href{https://ece.nitk.ac.in/faculty/shyam-lal}{Advisor: Dr Shyam Lal}} \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
             \item Implemented state of the art models and set up data pipelines for nuclear segmentation in histopathology images of kidney and liver tissues.
             \item Collaborated on the detection of Urothelial Carcinoma from whole slide images of bladder tissues with average dimensions of $80000\times50000$.
@@ -133,10 +136,10 @@
     }
     \\
     \\
-                         & \bdit{Summer Research Intern}                                                                                                                                             \\
-                         & Deep Learning Lab, NIT Karnataka \hfill \hspace{-3em} \textsl{May 2019\ --\ Jul 2019}                                                                                     \\
+                                                      & \bdit{Summer Research Intern}                                                                                                                                                                         \\
+                                                      & Deep Learning Lab, NIT Karnataka, India \hfill \hspace{-3em} \textsl{May 2019\ --\ Jul 2019}                                                                                                          \\
     %  & \textsl{\href{https://ece.nitk.ac.in/faculty/shyam-lal}{Advisor: Dr Shyam Lal}} \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
             \item Revamped and maintained data pipelines for deep learning based image segmentation and classification models.
             \item Refined efficient implementations of classical image processing algorithms on large datasets.
@@ -147,9 +150,9 @@
     \\
 
     % Work Experience
-    \stitle{Work}        & \bdit{Frontend Developer and UI Designer}                                                                                                                                 \\
-    \stitle{Experience}  & \href{https://iris.nitk.ac.in/about_us}{IRIS, NIT Karnataka} \hfill \textsl{Aug 2018\ --\ Apr 2019}                                                                       \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+    \multirow{2}{6.5em}{\stitle{Work Experience}}     & \bdit{Frontend Developer and UI Designer}                                                                                                                                                             \\
+                                                      & \href{https://iris.nitk.ac.in/about_us}{IRIS, NIT Karnataka, India} \hfill \textsl{Aug 2018\ --\ Apr 2019}                                                                                            \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
             \item Debugged and maintained parts of the frontend code at IRIS --- The official student portal with \~10,000 daily users.
             \item Createad a new, streamlined UI system from the ground up in Figma.
@@ -158,9 +161,9 @@
     }
     \\
     \\
-                         & \bdit{Python Developer}                                                                                                                                                   \\
-                         & Pinnacle Media, Manipal, Karnataka \hfill \textsl{May 2018\ --\ Jul 2018}                                                                                                 \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Python Developer}                                                                                                                                                                               \\
+                                                      & Pinnacle Media, Karnataka, India \hfill \textsl{May 2018\ --\ Jul 2018}                                                                                                                               \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
             \item Deployed real-time face detection and recognition, using OpenCV, dlib, and scikit-learn,
                   on a Raspberry Pi as a part of an `employee attendance' system.
@@ -169,15 +172,9 @@
     \\
     \\
 
-
-
-    % \stitle{Master's}    &                                                                                                                                                                                 \\
-    % \stitle{Thesis}      &                                                                                                                                                                                 \\
-    % \\
-
-    \stitle{Bachelor's}  & \bdit{Low Light Image Enhancement on Low Power Devices} \hfill \textsl{19}/\textsl{20}                                                                                    \\
-    \stitle{Thesis}      & \href{https://ece.nitk.ac.in/faculty/ramesh-kini-m}{Advisor: Dr Ramesh Kini} \hfill \textsl{Aug 2020\ --\ May 2021}                                                       \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+    \multirow{2}{6.5em}{\stitle{Bachelor's Thesis}}   & \bdit{Low Light Image Enhancement on Low Power Devices} \hfill \textsl{19}/\textsl{20}                                                                                                                \\
+                                                      & \href{https://ece.nitk.ac.in/faculty/ramesh-kini-m}{Advisor: Dr Ramesh Kini} \hfill \textsl{Aug 2020\ --\ May 2021}                                                                                   \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.70ex, topsep=-0.88ex]
             \item \textsl{Objective:} Design of hardware and software-optimized algorithms to capture vibrant and detailed low-light photos with inexpensive camera sensors without the use of obtrusive flashlights.
             \item Optimised the network to have just 79416 parameters and require just 5.21 GFlops of compute for a $256\times 256 \times 3$ image.
@@ -188,9 +185,9 @@
     \\
 
     % Notable projects
-    \stitle{Notable}     & \bdit{Fashion Discovery for Video Commerce} \hfill \textsl{Oct 2021 -- Mar 2022}                                                                                          \\
-    \stitle{Projects}    &                                                                                                                                                                           \\[-4ex]
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+    \multirow{2}{6.5em}{\stitle{Notable Projects}}    & \bdit{Fashion Discovery for Video Commerce} \hfill \textsl{Oct 2021 -- Mar 2022}                                                                                                                      \\
+                                                      &                                                                                                                                                                                                       \\[-4ex]
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=1.3ex]
             \item Researched the ``\href{https://openaccess.thecvf.com/content_iccv_2015/papers/Kiapour_Where_to_Buy_ICCV_2015_paper.pdf}{Exact street-to-shop}''
                   i.e. matching products in consumer images to those in manufacturer catalogues - a cross-domain image-based image retrieval problem.
@@ -199,29 +196,29 @@
     }
     \\
 
-                         & \bdit{Change detection in SAR images} \hfill \textsl{Feb 2021 -- May 2021}                                                                                                \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Change detection in SAR images} \hfill \textsl{Feb 2021 -- May 2021}                                                                                                                            \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
             \item Developed a multi-sensor, multi-modal algorithm for change detection in bi-temporal Synthetic Aperture Radar (SAR) images and presented findings in a report as part of a course-project.
         \end{itemize}
-    }                                                                                                                                                                                                \\
+    }                                                                                                                                                                                                                                                         \\
     \\[-1.4ex]
 
-                         & \bdit{Multi-lingual speech enhancement} \hfill \textsl{Feb 2021 -- May 2021}                                                                                              \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Multi-lingual speech enhancement} \hfill \textsl{Feb 2021 -- May 2021}                                                                                                                          \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
             \item Improved the quality and intelligibility of noisy speech recordings by upto 30\% using deep neural networks that generalize over out of sample languages.
             \item Reported findings that improved upon the state of the art in intelligibility without a significant drop in quality.
         \end{itemize}
-    }                                                                                                                                                                                                \\
+    }                                                                                                                                                                                                                                                         \\
     \\[-1.4ex]
 
-                         & \bdit{Information extraction from PDFs} \hfill \textsl{Apr 2021}                                                                                                          \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Information extraction from PDFs} \hfill \textsl{Apr 2021}                                                                                                                                      \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
             \item Developed a program to extract information embedded in table cells within PDFs with upto 70\% accuracy, as part of a system to automate the summarisation of insurance policies.
         \end{itemize}
-    }                                                                                                                                                                                                \\
+    }                                                                                                                                                                                                                                                         \\
     \\[-1.4ex]
 
 
@@ -233,40 +230,40 @@
     % }                                                                                                                                                                                                      \\
     % \\[-1.4ex]
 
-                         & \bdit{Muon Physics} \hfill \textsl{Mar 2020 -- Jun 2020}                                                                                                                  \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Muon Physics} \hfill \textsl{Mar 2020 -- Jun 2020}                                                                                                                                              \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
             \item Conceptualised and programmed a custom model to classify muon momenta trained on monte-carlo simulated data from the Cathode Strip Chambers at the CMS experiment of the Large Hadron Collider at CERN.
         \end{itemize}
-    }                                                                                                                                                                                                \\
+    }                                                                                                                                                                                                                                                         \\
     \\[-1.4ex]
 
-                         & \bdit{Segmentation of brain tumours in MRI images} \hfill \textsl{Dec 2019}                                                                                               \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Segmentation of brain tumours in MRI images} \hfill \textsl{Dec 2019}                                                                                                                           \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
             \item Reproduced state of the art semantic segmentation models in Keras/TF
                   to segment brain tumours and surrounding edema from MRI images with upto 83\% accuracy.
             \item Presented results on multi-class segmentation with a custom model variant on the BRATS dataset as part of a workshop on medical imaging.
         \end{itemize}
-    }                                                                                                                                                                                                \\
+    }                                                                                                                                                                                                                                                         \\
     \\[-1.4ex]
 
-                         & \bdit{Detecting Ponzi schemes in blockchain smart contracts} \hfill \textsl{Aug 2019 -- Sep 2019}                                                                         \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Detecting Ponzi schemes in blockchain smart contracts} \hfill \textsl{Aug 2019 -- Sep 2019}                                                                                                     \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
             \item Designed a custom model to classify smart contracts deployed on the Ethereum blockchain into 16 categories using CNNs and stacked auto-encoders, in under 48 hours for a coding sprint.
             \item Trained the model on raw bytecode of smart contracts mined from the blockchain using Google BigQuery, publicly available Solidity source code of popular smart contracts, and a publicly available dataset of 184 known Ponzi schemes.
                   % \item 
         \end{itemize}
-    }                                                                                                                                                                                                \\
+    }                                                                                                                                                                                                                                                         \\
     \\[-1.4ex]
 
-                         & \bdit{Predicting truth level of news articles} \hfill \textsl{Jul 2019 -- Aug 2019}                                                                                       \\
-                         & \parbox{0.8\textwidth}{                                                                                                                                                   %
+                                                      & \bdit{Predicting truth level of news articles} \hfill \textsl{Jul 2019 -- Aug 2019}                                                                                                                   \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
         \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
             \item Fashioned a model to classify news articles into 6 different categories based on the truth level and justifications provided by trusted news sources.
         \end{itemize}
-    }                                                                                                                                                                                                \\
+    }                                                                                                                                                                                                                                                         \\
     % \\[-1.4ex]
     \\[-1ex]
 
@@ -294,8 +291,8 @@
 
 
     \stitle{Honours}
-                         & Offered the Australian National University Chancellor's International Scholarship to pursue the Master of Computing at ANU's School of Computing.
-    \hfill \textsl{Mar 2022}                                                                                                                                                                         \\
+                                                      & Offered the Australian National University Chancellor's International Scholarship to pursue the Master of Computing at ANU's School of Computing.
+    \hfill \textsl{Mar 2022}                                                                                                                                                                                                                                  \\
     %                      & \parbox{0.8\textwidth}{
     %     \begin{itemize}[leftmargin=6ex, itemsep=-0.88ex, topsep=-0.88ex]
     %         \item Included fee waiver for the Masters degree and campus accommodation guarantees.
@@ -303,10 +300,10 @@
     % }
     \\[-1ex]
 
-                         & Selected as a \textbf{full-time research intern} at the
+                                                      & Selected as a \textbf{full-time research intern} at the
     \href{https://cps.iisc.ac.in/}{Robert Bosch Center for Cyber-Physical systems, Indian Institute of Science, Bangalore}, India's top research university, to work on
     ``Simultaneous Localization And Mapping - SLAM''.
-    \hfill \textsl{July 2020}                                                                                                                                                                        \\
+    \hfill \textsl{July 2020}                                                                                                                                                                                                                                 \\
     %                      & \parbox{0.8\textwidth}{                                                                                                                                                         %
     %     \begin{itemize}[leftmargin=6ex, itemsep=-0.88ex, topsep=-0.88ex]
     %         \item Offer refused due to conflicts with the university's schedule in 2020.
@@ -314,9 +311,9 @@
     % }
     \\[-1ex]
 
-                         & Selected for a \href{https://drive.google.com/file/d/1Rtlu6aHQKXntWhfEUcgB5tuNYMuvH04b}{\textbf{funded research internship}}
+                                                      & Selected for a \href{https://drive.google.com/file/d/1Rtlu6aHQKXntWhfEUcgB5tuNYMuvH04b}{\textbf{funded research internship}}
     at the \href{https://www.hesge.ch/hepia/}{Haute école du paysage, d'ingénierie et d'architecture de Genève}, \href{https://www.hesge.ch/geneve}{Haute Ecole Spécialisée de Suisse occidentale, Geneva}
-    to work on ``NavTrack: A portable obstacle tracker for the rehabilitation of spatial neglect''.           \hfill \textsl{Mar 2020}                                                               \\
+    to work on ``NavTrack: A portable obstacle tracker for the rehabilitation of spatial neglect''.           \hfill \textsl{Mar 2020}                                                                                                                        \\
     %                  & \parbox{0.8\textwidth}{                                                                                                                                                         %
     % \begin{itemize}[leftmargin=6ex, itemsep=-0.88ex, topsep=-0.88ex]
     %     \item Offer rescinded due to pandemic-induced travel restrictions. \\
