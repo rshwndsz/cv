@@ -1,0 +1,311 @@
+% A tabular CV 
+
+% === Preamble ===
+% Font size
+\documentclass[letterpaper, 10pt, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+% For better tables
+\usepackage{tabularx}
+% For multi-page table
+\usepackage{longtable}
+% For more color names
+\usepackage[dvipsnames]{xcolor}
+% For Hyperlinks
+\usepackage{hyperref}
+% For better link colors
+\definecolor{dark-purple}{HTML}{00034D}
+\hypersetup{colorlinks  = true,
+            linkcolor   = blue,
+            filecolor   = magenta,
+            urlcolor    = dark-purple, 
+            pdftitle    = {Russel's CV},
+            pdfpagemode = FullScreen,
+}
+% For thicker horizontal rules
+\usepackage{booktabs}
+% For icons
+\usepackage{fontawesome5}
+% For margins
+\usepackage[left=.64in, right=.64in, bottom=.64in, top=.64in]{geometry}
+% For a thick underline - https://tex.stackexchange.com/a/443445
+\usepackage{lipsum}
+\newcommand\dunderline[3][-1pt]{{%
+        \setbox0=\hbox{#3}
+\ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+% For customization of list environment
+\usepackage{enumitem}
+% For multirow elements in table
+\usepackage{multirow}
+\usepackage{array, makecell}
+
+\usepackage[norule,hang,symbol]{footmisc}
+\setlength{\footnotemargin}{1em}
+% \setlength{\skip\footins}{3em}
+
+
+% === Setup ===
+% Page numbers - 
+% {arabic}=Arabic numerals, {gobble}=no page numbers, {roman}=Roman numerals
+\pagenumbering{arabic}
+
+
+% === My Commands ===
+% Section title - Uppercase with first letter slightly bigger
+\newcommand{\stitle}[1]{\normalsize{\textsc{#1}}}
+% Bold & Italic
+\newcommand{\bdit}[1]{{\textbf{#1}}}
+% Use hyphens instead of bullets for lists
+\def\labelitemi{--}
+\begin{document}
+
+
+% My name
+\noindent\dunderline[-2ex]{1pt}{\Large{\textbf{Russel Shawn Dsouza} \hspace{0.67\linewidth}} }          \\
+\normalsize
+
+
+\noindent \begin{longtable}{@{} p{0.13\linewidth} p{0.8\linewidth}}
+    % Address & socials
+    \multirow{2}{6.5em}{\stitle{Contact Information}} &  Birmingham\hfill \href{mailto:rsd259@student.bham.ac.uk}{rsd259@student.bham.ac.uk}                                                                                                               \\
+                                                      &  United Kingdom  B5 7AJ\hfill \href{https://rshwndsz.github.io}{rshwndsz.github.io} $\cdot$ \href{mailto:rshwndsz@gmail.com}{rshwndsz@gmail.com}                                                        \\
+                                                      &  \hfill \href{https://github.com/rshwndsz}{\faIcon{github} github.com/rshwndsz} $\cdot$ \href{https://linkedin.com/in/rshwndsz}{\faIcon{linkedin}} \textcolor{dark-purple}{rshwndsz} \\
+    \\[-1.5ex]
+
+
+    % Education
+    \stitle{Education}                                & {Masters, Artificial Intelligence \& Machine Learning}                                                                                                                                      \\
+                                                      & \href{https://birmingham.ac.uk}{University of Birmingham}, UK \hfill \textsl{2022\ --\ 2023}                                                                                                          \\
+    \\[-1.5ex]
+                                                      & {Bachelors, Electronics \& Communications Engineering}                                                                                                                                   \\
+                                                      & \href{https://nitk.ac.in}{National Institute of Technology Karnataka}, India \hfill \hspace{-3em} \textsl{2017\ --\ 2021}                                                                             \\
+    \\[-1.5ex]
+                                                      & {K-12}                                                                                                                                                                                                \\
+                                                      & \href{https://littlerock.edu.in}{Little Rock Indian School}, India \hfill \textsl{2004\ --\ 2017}                                                                                                     \\
+    \\
+
+    % Research interests
+    \multirow{2}{5em}{\stitle{Research Interests}}    & Real-Time Computer Vision for Augmented Reality                                                                                                                                                       \\
+                                                      & Image and Video Retrieval, Compression and Representation learning                                                                                                                                                             \\
+    \\
+
+
+    % Research experience
+    \multirow{2}{6.5em}{\stitle{Research Experience}} & \bdit{Research Intern}                                                                                                                                                                                \\
+                                                      & \href{http://www.minds.iitb.ac.in/}{CMInDS} and \href{https://www.csre.iitb.ac.in/}{CSRE}, IIT Bombay, India \hfill \textsl{May 2021\ --\ Sep 2021}                                                   \\
+    %  & \textsl{\href{https://biplab-banerjee.github.io/}{Advisor: Prof Biplab Banerjee}} \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
+            \item Designed and developed model variants for multi-modal, pixel-wise classification of land-use from hyper-spectral and LiDAR satellite imagery with vision transformers and CNNs.
+            \item Improved model peak-performance by over 10\% through the use of state-of-the-art Bayesian hyper-parameter optimisation.
+        \end{itemize}
+    }
+    \\
+    \\
+                                                      & \bdit{Winter Research Intern}                                                                                                                                                                         \\
+                                                      & Deep Learning Lab, NIT Karnataka, India \hfill \hspace{-3em} \textsl{Dec 2019\ --\ Mar 2020}                                                                                                          \\
+    %  & \textsl{\href{https://ece.nitk.ac.in/faculty/shyam-lal}{Advisor: Dr Shyam Lal}} \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
+            \item Implemented cutting-edge models and established high-performance data pipelines for nuclear segmentation in histopathology images of kidney and liver tissues.
+            \item Collaborated on the detection of \textit{Urothelial Carcinoma} from whole slide images of bladder tissues with an average size of 4 billion pixels.
+            \item Created an open-source project to benchmark segmentation models on histopathology datasets, resulting in improved reproducibility and standardisation of results.
+            \item Presented a comprehensive report reviewing the state-of-the-art methods for nuclear segmentation in histopathology, providing valuable insights and recommendations for future research.
+        \end{itemize}
+    }
+    \\
+    \\
+                                                      & \bdit{Summer Research Intern}                                                                                                                                                                         \\
+                                                      & Deep Learning Lab, NIT Karnataka, India \hfill \hspace{-3em} \textsl{May 2019\ --\ Jul 2019}                                                                                                          \\
+    %  & \textsl{\href{https://ece.nitk.ac.in/faculty/shyam-lal}{Advisor: Dr Shyam Lal}} \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
+            \item Revamped and maintained high-performance data pipelines for deep learning-based image segmentation and classification models, resulting in improvements in accuracy and processing speed.
+            \item Streamlined classical image processing algorithms for large datasets, achieving a 20\% reduction in processing time in some cases.
+            \item Conducted extensive literature surveys and reproduced state-of-the-art results from seminal papers in automated histopathology, contributing to the lab's cutting-edge research.
+        \end{itemize}
+    }
+    \\
+    \\
+
+        \stitle{Misc.}  & Selected as a \textbf{full-time research intern} at the
+    \href{https://cps.iisc.ac.in/}{Robert Bosch Center for Cyber-Physical systems, Indian Institute of Science, Bangalore}, to work on
+    ``Simultaneous Localisation And Mapping - SLAM''.\footnote[1]{\label{note1}\hspace{40em} \textsuperscript{*} Could not undertake due to COVID-19}
+    \hfill \textsl{July 2020}                                                                                                     
+    \\
+    \\[-1.5ex]
+
+                                                      & Selected for a \textbf{funded research internship}
+    at the \href{https://www.hesge.ch/hepia/}{Haute école du paysage, d'ingénierie et d'architecture de Genève}, \href{https://www.hesge.ch/geneve}{Haute Ecole Spécialisée de Suisse occidentale, Geneva}
+    to work on ``NavTrack: A portable obstacle tracker for the rehabilitation of spatial neglect''.\textsuperscript{*}         \hfill \textsl{Mar 2020}                                                                                                                      \\
+    \\
+
+      \multirow{2}{6.5em}{\stitle{Master's Disseration}}   & \bdit{Examining adversarial alignment-subversion in generative language models}                                                                                                               \\
+                                                      & Advisor: \href{https://vkovatchev.com/}{Dr Venelin Kovatchev} \hfill \textsl{Jun 2023\ --\ Sept 2023}                                                                                   \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.70ex, topsep=-0.88ex]
+            \item Exploring the automation of detection of adversarial attacks on language models.
+            \item Analysing intermediate layers of large language models to better understand triggers for adversarial attacks.
+        \end{itemize}
+    }
+    \\
+    \\
+
+    \multirow{2}{6.5em}{\stitle{Bachelor's Dissertation}}   & \bdit{Low-light image enhancement on low-power devices} \hfill \textsl{19}/\textsl{20}                                                                                                                \\
+                                                      & Advisor: \href{https://ece.nitk.ac.in/faculty/ramesh-kini-m}{Dr Ramesh Kini} \hfill \textsl{Aug 2020\ --\ May 2021}                                                                                   \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+                \begin{itemize}[leftmargin=*, itemsep=-0.70ex, topsep=-0.88ex]
+            \item Designed hardware- and software-optimised algorithms to capture vibrant and detailed low-light photos with inexpensive camera sensors, without using obtrusive flashlights.
+            \item Optimised the neural network to have less than 100k parameters and require only about 5 GFlops of compute for a $256 \times 256$ colour image, resulting in a 35\% reduction in model size and a 20\% improvement in processing speed.
+            \item Redesigned the entire image processing pipeline on the edge-device using C\texttt{++}, resulting in a 10\% reduction in latency and a 50\% reduction in memory usage.
+        \end{itemize}
+    }
+    \\
+    \\
+
+        % Skills
+    % TODO Table?
+    \stitle{Skills}                                   &                                                                                                                                                                                                       \\[-2.34ex]
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=0ex, itemsep=-0.4ex, topsep=-2ex, label={}]
+            \item \bdit{Languages}: Python, Java, C\texttt{++}, C, SQL, JavaScript, Go, Rust, MATLAB
+            \item \bdit{Frameworks}:  PyTorch, Keras, OpenCV, scikit-learn, Numeric \& Scientific Python
+            % \item \bdit{Web Dev}: NodeJS, ExpressJS, postgreSQL
+            \item \bdit{Tools}:     git, Docker, bash, vim, Linux
+            \item \bdit{Hardware}:  Verilog, ngSPICE, Arduino, Xilinx Artix
+        \end{itemize}
+    }
+    \\
+    \\[1ex]
+
+       % Work Experience
+    \multirow{2}{6.5em}{\stitle{Work Experience}}     & \bdit{Frontend Developer and UI Designer}                                                                                                                                                             \\
+                                                      & \href{https://iris.nitk.ac.in/about_us}{IRIS, NIT Karnataka, India} \hfill \textsl{Aug 2018\ --\ Apr 2019}                                                                                            \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
+            \item Debugged and maintained critical parts of the front-end code at IRIS, the official student portal with over 10k daily active users
+            \item Created a new, streamlined UI system from the ground up in Figma.
+            \item Developed the design system in Vue.js and spearheaded the integration of JavaScript with legacy Rails code.
+        \end{itemize}
+    }
+    \\
+    \\
+    %                                                   & \bdit{Python Developer}                                                                                                                                                                               \\
+    %                                                   & Pinnacle Media, Karnataka, India \hfill \textsl{May 2018\ --\ Jul 2018}                                                                                                                               \\
+    %                                                   & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+    %     \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=-0.88ex]
+    %         \item Deployed real-time face detection and recognition, using OpenCV, dlib, and scikit-learn,
+    %               on a Raspberry Pi as a part of an `employee attendance' system.
+    %     \end{itemize}
+    % }
+    % \\
+    % \\
+
+    % Notable projects
+    \multirow{2}{6.5em}{\stitle{Notable Projects}}    
+    & \bdit{Fashion Discovery for Video Commerce} \hfill \textsl{Oct 2021 -- Mar 2022}                                                                                                                      \\
+                                                      &                                                                                                                                                                                                       \\[-4ex]
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=1.3ex]
+            \item Worked on  ``\href{https://openaccess.thecvf.com/content_iccv_2015/papers/Kiapour_Where_to_Buy_ICCV_2015_paper.pdf}{Exact street-to-shop}''
+                  i.e. matching products in consumer photos to those in manufacturer catalogues - a cross-domain image-based image retrieval problem.
+            \item Pitched the prototype software to a top-3 short-video platform in India.
+        \end{itemize}
+    }
+    \\
+
+    %                                                   & \bdit{Change detection in SAR images} \hfill \textsl{Feb 2021 -- May 2021}                                                                                                                            \\
+    %                                                   & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+    %     \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+    %         \item Developed a multi-sensor, multi-modal algorithm for change detection in bi-temporal Synthetic Aperture Radar (SAR) images and presented findings in a report as part of a course-project.
+    %     \end{itemize}
+    % }                                                                                                                                                                                                                                                         \\
+    % \\[-1.4ex]
+
+                                                      & \bdit{Multi-lingual speech enhancement} \hfill \textsl{Feb 2021 -- May 2021}                                                                                                                          \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+            \item Developed a deep neural network to improve the quality and intelligibility of noisy speech recordings by up to 30\%, even in out-of-sample languages.
+            \item Conducted extensive experiments on a large dataset of diverse languages and noise types, demonstrating that our approach outperforms state-of-the-art methods in terms of intelligibility without sacrificing quality.
+        \end{itemize}
+    }                                                                                                                                                                                                                                                         \\
+    \\[-1.4ex]
+
+                                                      & \bdit{Information extraction from PDFs} \hfill \textsl{Apr 2021}                                                                                                                                      \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+            \item Developed a program to extract information embedded in table cells within PDFs with upto 70\% accuracy, as part of a system to automate summarising insurance policies.
+        \end{itemize}
+    }                                                                                                                                                                                                                                                         \\
+    \\[-1.4ex]
+
+
+    %                      & \bdit{Image Restoration} \hfill \textsl{Jul 2020}                                                                                                                               \\
+    %                      & \parbox{0.8\textwidth}{                                                                                                                                                         %
+    %     \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+    %         \item Reproduced a very deep persistent memory network to perform image restoration by removing noise and predicting uncorrupted images; achieved results comparable to the original paper.
+    %     \end{itemize}
+    % }                                                                                                                                                                                                      \\
+    % \\[-1.4ex]
+
+                                                      & \bdit{Muon Physics} \hfill \textsl{Mar 2020 -- Jun 2020}                                                                                                                                              \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+            \item Conceptualised and programmed a custom model to classify muon momenta trained on monte-carlo simulated data from the Cathode Strip Chambers at the CMS experiment of the Large Hadron Collider at CERN.
+        \end{itemize}
+    }                                                                                                                                                                                                                                                         \\
+    \\[-1.4ex]
+
+                                                      & \bdit{Segmentation of brain tumours in MRI images} \hfill \textsl{Dec 2019}                                                                                                                           \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+            \item Reproduced state of the art semantic segmentation models in Keras/TF
+                  to segment brain tumours and surrounding edema from MRI images with upto 83\% accuracy.
+            \item Presented results on multi-class segmentation with a custom model variant on the BRATS dataset as part of a workshop on medical imaging.
+        \end{itemize}
+    }                                                                                                                                                                                                                                                         \\
+    \\[-1.4ex]
+
+                                                      & \bdit{Detecting Ponzi schemes in blockchain smart contracts} \hfill \textsl{Aug 2019 -- Sep 2019}                                                                                                     \\
+                                                      & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+        \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+            \item Designed and developed a custom model using CNNs and stacked auto-encoders to accurately classify smart contracts deployed on the Ethereum blockchain into 16 categories, delivering results in under 48 hours for a coding sprint.
+            \item Trained the model on raw bytecode of smart contracts extracted from the blockchain using Google BigQuery, publicly available Solidity source code of popular smart contracts, and a dataset of 184 known Ponzi schemes.
+        \end{itemize}
+    }                                                                                                                                                                                                                                                         
+    \\
+    \\[-1ex]
+
+    %                                                   & \bdit{Predicting truth level of news articles} \hfill \textsl{Jul 2019 -- Aug 2019}                                                                                                                   \\
+    %                                                   & \parbox{0.8\textwidth}{                                                                                                                                                                               %
+    %     \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+    %         \item Developed a novel model using natural language processing techniques to accurately classify news articles into 6 categories based on the truth level and justifications provided by trusted news sources.
+    %     \end{itemize}
+    % }                                                                                                                                                                                                                                                         \\
+    % % \\[-1.4ex]
+    % \\[-1ex]
+
+    %                      & \bdit{Space Time Adaptive Processing Radar} \hfill \textsl{Apr 2019}                                                                                                            \\
+    %                      & \parbox{0.8\textwidth}{                                                                                                                                                         %
+    %     \begin{itemize}[leftmargin=*, itemsep=-0.88ex, topsep=0.2ex]
+    %         \item Simulated a radar implementing STAP in Matlab and presented a report on the current state of STAP in Radar Signal Processing.
+    %     \end{itemize}
+    % }                                                                                                                                                                                                      \\
+    % \\[-1ex]
+
+
+    % % Relevant Coursework
+    % \stitle{Relevant}    & Neural Networks \& Deep learning, Applications of Machine Learning in Medical Imaging,                                                                                                                            \\
+    % \stitle{Coursework}  & Image and Video Processing, Speech and Audio Processing, Digital Signal Processing                                                                                                                                \\
+    %                      & Statistical Analysis, Numerical Analysis                                                                                                                                                                          \\
+    %                      & Embedded Systems, Digital System Design, Microprocessors, VLSI Design, Control Systems                                                                                                                            \\
+    %                      & Data Structures \& Algorithms, Digital Electronics \& Computer Architecture                                                                                                                                       \\
+    % \\[-1ex]
+
+
+    % \stitle{Relevant}    & \href{https://drive.google.com/file/d/1GcdXmPTWR-6tKUgB92V8pG8GVn-ng_6C}{GRE} - 163V 168Q 5A                                                                              \\
+    % \stitle{Scores}      & \href{https://drive.google.com/file/d/1lHDbt59e9o1LFKb_HhWiVbzITH7avB6j}{TOEFL} - 30R 30W 30L 25S                                                                         \\
+    % \\
+
+\end{longtable}
+\end{document}
